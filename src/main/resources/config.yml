@@ -1,0 +1,10 @@
+messageSuccess: "§aYou have been teleported to a random place"
+messageInGame: "§cThis command only works in game"
+messageError: "§cError: Blocked by another plugin"
+messageUnallowed: "§cUsing wild command is not allowed in this world"
+minX: -3000
+maxX: 3000
+minZ: -3000
+maxZ: 3000
+allowedWorlds:
+  - "world"

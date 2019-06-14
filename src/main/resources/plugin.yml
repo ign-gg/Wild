@@ -1,0 +1,16 @@
+name: Wild
+version: "${pom.version}"
+api: ["1.0.0"]
+author: PetteriM1
+main: tk.suomicraftpe.commands.WildCommand
+
+commands:
+  wild:
+    description: Wild teleport
+    usage: "/wild"
+    permission: commands.wild
+
+permissions:
+  commands.wild:
+    description: "Allow usage of /wild"
+    default: true
