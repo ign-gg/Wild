@@ -1,6 +1,7 @@
 package tk.suomicraftpe.commands;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.math.Vector3;
@@ -19,7 +20,7 @@ public class WildCommand extends PluginBase {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("wild")) {
+        if (command.getName().equals("wild")) {
             if (sender instanceof Player) {
                 if (c.getList("allowedWorlds").contains(((Player) sender).getLevel().getName())) {
                     wild((Player) sender);
@@ -39,7 +40,7 @@ public class WildCommand extends PluginBase {
             return max;
         }
         
-        return min + new Random(System.currentTimeMillis()).nextInt(max - min);
+        return min + ThreadLocalRandom.current().nextInt(max - min);
     }
 
     private void wild(Player p) {

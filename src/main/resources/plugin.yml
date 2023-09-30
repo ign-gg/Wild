@@ -6,8 +6,9 @@ main: tk.suomicraftpe.commands.WildCommand
 
 commands:
   wild:
-    description: Wild teleport
+    description: Teleport to a random location
     usage: "/wild"
+    aliases: ["rtp"]
     permission: commands.wild
 
 permissions:
