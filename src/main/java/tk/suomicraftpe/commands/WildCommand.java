@@ -45,7 +45,7 @@ public class WildCommand extends PluginBase {
 
     private void wild(Player p) {
         p.level.threadedExecutor.execute(() -> {
-            if (p.teleport(p.getLevel().getSafeSpawn(new Vector3(rand(c.getInt("minX"), c.getInt("maxX")), 70, rand(c.getInt("minZ"), c.getInt("maxZ")))))) {
+            if (p.teleport(p.getLevel().getSafeSpawn(new Vector3(rand(c.getInt("minX"), c.getInt("maxX")), 128, rand(c.getInt("minZ"), c.getInt("maxZ")))))) {
                 p.sendMessage(c.getString("messageSuccess"));
             } else {
                 p.sendMessage(c.getString("messageError"));
