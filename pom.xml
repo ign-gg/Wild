@@ -6,7 +6,7 @@
 
     <groupId>tk.suomicraftpe.commands</groupId>
     <artifactId>Wild</artifactId>
-    <version>1.0.1-IGN.2</version>
+    <version>1.0.1-IGN.3</version>
     <build>
         <defaultGoal>install</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
