@@ -72,11 +72,12 @@ public class WildCommand extends PluginBase {
 
         tpQueue.add(p.getId());
 
+        int y = "bedrock".equals(level.getName()) ? 5 : 128;
         level.threadedExecutor.execute(() -> {
             Position spawn = level.getSafeSpawn(new Position(rand(
                     byName ? c.getInt("BminX") : c.getInt("minX"),
                     byName ? c.getInt("BmaxX") : c.getInt("maxX")),
-                    128, rand(
+                    y, rand(
                     byName ? c.getInt("BminZ") : c.getInt("minZ"),
                     byName ? c.getInt("BmaxZ") : c.getInt("maxZ")),
                     level));
